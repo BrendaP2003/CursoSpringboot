@@ -1,5 +1,6 @@
-package com.example.demo.Rest.Entidades;
+package com.example.demo.Entidades;
 
+import com.example.demo.Dto.Response.UsuarioResponse;
 import jakarta.persistence.*;
 
 @Entity
@@ -11,15 +12,20 @@ public class Usuariomodel {
     public Long id;
     public String Nombre;
     public String Email;
-    public Integer Prioridad;
+    public String Rol;
 
-    public Integer getPrioridad() {
-        return Prioridad;
+    public Usuariomodel(String nombre, String email, String rol) {
     }
 
-    public void setPrioridad(Integer prioridad) {
-        Prioridad = prioridad;
+
+    public String getRol() {
+        return Rol;
     }
+
+    public void setRol(String rol) {
+        Rol = rol;
+    }
+
 
     public String getEmail() {
         return Email;

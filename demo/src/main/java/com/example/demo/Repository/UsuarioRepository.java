@@ -1,8 +1,7 @@
-package com.example.demo.Rest.Repository;
+package com.example.demo.Repository;
 
-import com.example.demo.Rest.Entidades.Usuariomodel;
+import com.example.demo.Entidades.Usuariomodel;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
