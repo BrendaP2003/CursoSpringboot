@@ -13,13 +13,13 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.Optional;
 
-
 @Service
 public class UsuarioService {
     @Autowired
     UsuarioRepository usuarioRepository;
-//obtener
-    public ArrayList<UsuarioResponse> ObtenerUsuarios(){
+
+    //obtener
+    public ArrayList<UsuarioResponse> ObtenerUsuarios() {
         ArrayList<UsuarioResponse> ListaUsuarios = new ArrayList<>();
         var usuarios = usuarioRepository.findAll();
         for (Usuariomodel usuariomodel : usuarios) {
@@ -27,6 +27,7 @@ public class UsuarioService {
         }
         return ListaUsuarios;
     }
+
     //obtener Por id
     public Optional<UsuarioResponse> ObtenerPorId(Long id) {
         Optional<Usuariomodel> usuario = usuarioRepository.findById(id); // Obtiene el usuario como Optional

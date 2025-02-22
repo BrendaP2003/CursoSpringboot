@@ -1,6 +1,5 @@
 package com.example.demo.Entidades;
 
-import com.example.demo.Dto.Response.UsuarioResponse;
 import jakarta.persistence.*;
 
 @Entity
@@ -10,13 +9,29 @@ public class Usuariomodel {
    @GeneratedValue(strategy = GenerationType.IDENTITY)
    @Column(unique = true, nullable = false)
     public Long id;
-    public String Nombre;
+    public String NombreUser;
     public String Email;
     public String Rol;
+    public String Password;
 
-    public Usuariomodel(String nombre, String email, String rol) {
+
+
+    public Usuariomodel(String nombre, String email, String rol, String password) {
+
+        NombreUser = nombre;
+        Email = email;
+        Rol = rol;
+        Password= password;
+
     }
 
+    public String getPassword() {
+        return Password;
+    }
+
+    public void setPassword(String password) {
+        this.Password = password;
+    }
 
     public String getRol() {
         return Rol;
@@ -44,10 +59,10 @@ public class Usuariomodel {
     }
 
     public String getNombre() {
-        return Nombre;
+        return NombreUser;
     }
 
     public void setNombre(String nombre) {
-        Nombre = nombre;
+        NombreUser = nombre;
     }
 }

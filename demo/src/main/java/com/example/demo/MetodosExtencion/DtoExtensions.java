@@ -12,7 +12,7 @@ public class DtoExtensions {
         if (usuarioRequest== null){
             return null;
         }
-        return new Usuariomodel(usuarioRequest.Nombre(),usuarioRequest.Email(), usuarioRequest.Rol());
+        return new Usuariomodel(usuarioRequest.Nombre(),usuarioRequest.Email(), usuarioRequest.Rol(),usuarioRequest.Password());
     }
     //convertir Dto (EmpleadoRequest) a entidad (EmpleadoModel)
     public static EmpleadoModel toEntityEmpleado (EmpleadoRequest empleadoRequest){
